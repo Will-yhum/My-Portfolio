@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Detail | William Maboya</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Dark Mode Toggle -->
+    <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress-bar"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html" class="logo">WM</a>
+            </div>
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#skills">Skills</a></li>
+                    <li><a href="index.html#projects" class="active">Projects</a></li>
+                    <li><a href="index.html#experience">Experience</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <main class="project-detail">
+        <div class="container">
+            <a href="index.html#projects" class="back-to-portfolio">
+                <i class="fas fa-arrow-left"></i> Back to Projects
+            </a>
+            
+            <div class="project-header">
+                <h1 id="project-title">Project Detail</h1>
+                <div class="project-meta">
+                    <div class="project-meta-item">
+                        <i class="fas fa-calendar"></i>
+                        <span id="project-date">2024</span>
+                    </div>
+                    <div class="project-meta-item">
+                        <i class="fas fa-code-branch"></i>
+                        <span id="project-version">v1.0.0</span>
+                    </div>
+                    <div class="project-meta-item">
+                        <i class="fas fa-clock"></i>
+                        <span id="project-readtime">5 min read</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-image-hero" id="project-image">
+                <i class="fas fa-code"></i>
+            </div>
+            
+            <div class="project-content-detail" id="project-content"></div>
+            
+            <div class="project-links-detail">
+                <a href="#" class="btn btn-primary" id="github-link" target="_blank">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+                <a href="#" class="btn btn-outline" id="demo-link" target="_blank" style="display: none;">
+                    <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2026 William Maboya. All rights reserved.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/william-maboya" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:willemmaboya08@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        if (darkModeToggle) {
+            const darkMode = localStorage.getItem('darkMode') === 'enabled';
+            if (darkMode) {
+                document.body.classList.add('dark-mode');
+                darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            }
+            darkModeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                if (document.body.classList.contains('dark-mode')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                    darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                    darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                }
+            });
+        }
+        
+        // Reading Progress Bar
+        const progressBar = document.querySelector('.reading-progress-bar');
+        if (progressBar) {
+            window.addEventListener('scroll', () => {
+                const windowHeight = window.innerHeight;
+                const documentHeight = document.documentElement.scrollHeight;
+                const scrollTop = window.scrollY;
+                const progress = (scrollTop / (documentHeight - windowHeight)) * 100;
+                progressBar.style.width = `${Math.min(progress, 100)}%`;
+            });
+        }
+        
+        // Back to Top Button
+        const backToTop = document.getElementById('back-to-top');
+        if (backToTop) {
+            window.addEventListener('scroll', () => {
+                backToTop.style.display = window.scrollY > 300 ? 'flex' : 'none';
+            });
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+        
+        // Mobile Navigation
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        if (navToggle) {
+            navToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+            });
+        }
+        document.addEventListener('click', (e) => {
+            if (navMenu && navMenu.classList.contains('active') && 
+                !navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
+        
+        // Navbar scroll effect
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Project Data
+        const projects = {
+            'classification-model': {
+                title: 'Supervised Learning Classification',
+                date: '2024',
+                version: 'v1.0.0',
+                readtime: '5 min read',
+                github: 'https://github.com/william-maboya/ML-Classification-Model',
+                demo: null,
+                icon: 'fa-chart-line',
+                content: `
+                    <div class="project-section">
+                        <h2>Overview</h2>
+                        <p>Capstone project for Higher Certificate in IT. Built and evaluated supervised learning models using Python, scikit-learn, and TensorFlow to solve a real-world classification problem. The project involved complete ML workflow from data preprocessing to model evaluation.</p>
+                    </div>
+                    <div class="project-section">
+                        <h2>Key Features</h2>
+                        <ul class="feature-list">
+                            <li>Comprehensive data preprocessing and cleaning pipeline</li>
+                            <li>Feature engineering to improve model performance</li>
+                            <li>Implementation of multiple supervised learning algorithms</li>
+                            <li>Model evaluation using cross-validation and metrics</li>
+                            <li>Hyperparameter tuning for optimal performance</li>
+                            <li>Result visualization and interpretation</li>
+                        </ul>
+                    </div>
+                    <div class="project-section">
+                        <h2>Technologies Used</h2>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">scikit-learn</span>
+                            <span class="tech-badge">TensorFlow</span>
+                            <span class="tech-badge">Pandas</span>
+                            <span class="tech-badge">NumPy</span>
+                            <span class="tech-badge">Matplotlib</span>
+                        </div>
+                    </div>
+                    <div class="project-section">
+                        <h2>Code Example</h2>
+                        <div class="code-block"><pre>from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score, classification_report
+
+# Data preprocessing
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42
+)
+
+# Model training
+model = RandomForestClassifier(n_estimators=100)
+model.fit(X_train, y_train)
+
+# Evaluation
+predictions = model.predict(X_test)
+print(f"Accuracy: {accuracy_score(y_test, predictions):.2f}")
+print(classification_report(y_test, predictions))</pre></div>
+                    </div>
+                `
+            },
+            'data-pipeline': {
+                title: 'Data Preprocessing Pipeline',
+                date: '2024',
+                version: 'v1.0.0',
+                readtime: '4 min read',
+                github: 'https://github.com/william-maboya/Data-Preprocessing-Pipeline',
+                demo: null,
+                icon: 'fa-filter',
+                content: `
+                    <div class="project-section">
+                        <h2>Overview</h2>
+                        <p>Developed end-to-end data preprocessing pipelines as part of BSc IT coursework. The pipeline handles missing values, feature scaling, encoding categorical variables, and feature engineering for machine learning workflows.</p>
+                    </div>
+                    <div class="project-section">
+                        <h2>Key Features</h2>
+                        <ul class="feature-list">
+                            <li>Automated missing value detection and imputation</li>
+                            <li>Feature scaling and normalization</li>
+                            <li>Categorical variable encoding (One-Hot, Label)</li>
+                            <li>Feature selection and engineering</li>
+                            <li>Pipeline persistence for reuse</li>
+                            <li>Integration with scikit-learn pipelines</li>
+                        </ul>
+                    </div>
+                    <div class="project-section">
+                        <h2>Technologies Used</h2>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Pandas</span>
+                            <span class="tech-badge">NumPy</span>
+                            <span class="tech-badge">scikit-learn</span>
+                            <span class="tech-badge">Data Engineering</span>
+                        </div>
+                    </div>
+                `
+            },
+            'ml-web-integration': {
+                title: 'ML Model Web Integration',
+                date: '2024',
+                version: 'v1.0.0',
+                readtime: '5 min read',
+                github: 'https://github.com/william-maboya/ML-Model-Web-Integration',
+                demo: null,
+                icon: 'fa-globe',
+                content: `
+                    <div class="project-section">
+                        <h2>Overview</h2>
+                        <p>Integrated trained machine learning models into web applications to solve real-world problems. The project demonstrates end-to-end ML deployment from model training to web interface.</p>
+                    </div>
+                    <div class="project-section">
+                        <h2>Key Features</h2>
+                        <ul class="feature-list">
+                            <li>Flask-based web application backend</li>
+                            <li>ML model loading and inference API</li>
+                            <li>Interactive user interface for predictions</li>
+                            <li>Result visualization and display</li>
+                            <li>Error handling and input validation</li>
+                        </ul>
+                    </div>
+                    <div class="project-section">
+                        <h2>Technologies Used</h2>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Flask</span>
+                            <span class="tech-badge">HTML/CSS</span>
+                            <span class="tech-badge">scikit-learn</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">Model Deployment</span>
+                        </div>
+                    </div>
+                `
+            }
+        };
+        
+        const urlParams = new URLSearchParams(window.location.search);
+        const projectId = urlParams.get('id') || 'classification-model';
+        const project = projects[projectId];
+        
+        if (project) {
+            document.getElementById('project-title').textContent = project.title;
+            document.getElementById('project-date').textContent = project.date;
+            document.getElementById('project-version').textContent = project.version;
+            document.getElementById('project-readtime').textContent = project.readtime;
+            document.getElementById('project-content').innerHTML = project.content;
+            
+            const githubBtn = document.getElementById('github-link');
+            if (project.github) {
+                githubBtn.href = project.github;
+                githubBtn.style.display = 'inline-flex';
+            } else {
+                githubBtn.style.display = 'none';
+            }
+            
+            const demoBtn = document.getElementById('demo-link');
+            if (project.demo) {
+                demoBtn.style.display = 'inline-flex';
+                demoBtn.href = project.demo;
+            } else {
+                demoBtn.style.display = 'none';
+            }
+            
+            document.title = project.title + ' | William Maboya';
+            
+            const iconElement = document.querySelector('#project-image i');
+            if (iconElement) iconElement.className = 'fas ' + project.icon;
+        }
+    </script>
+</body>
+</html>

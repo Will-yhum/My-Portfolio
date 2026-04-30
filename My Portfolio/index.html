@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="William Maboya - Machine Learning Intern portfolio showcasing projects, skills, and experience in AI, Machine Learning, and Python development">
+    <meta name="keywords" content="Machine Learning, AI, Python, TensorFlow, Data Science, William Maboya">
+    <meta name="author" content="William Maboya">
+    <title>William Maboya | Machine Learning Intern</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Dark Mode Toggle -->
+    <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress-bar"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="#home" class="logo">WM</a>
+            </div>
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="greeting">👋 Hello, I'm</span>
+                    <h1 class="hero-title">William Maboya</h1>
+                    <div class="typed-container">
+                        <span class="typed-text"></span>
+                        <span class="cursor">&nbsp;</span>
+                    </div>
+                    <p class="hero-description">
+                        IT student specializing in emerging technologies and machine learning. Practical experience building and evaluating models using Python, scikit-learn, and TensorFlow, with solid skills in data preprocessing, feature engineering, and model evaluation.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-outline" id="hireMeBtn">Hire Me</a>
+                        <a href="#projects" class="btn btn-outline" id="viewProjectsBtn">View Projects</a>
+                        <a href="#" class="btn btn-outline" id="downloadCVBtn">
+                            <i class="fas fa-download"></i> Download CV
+                        </a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/Will-yhum" target="_blank" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/william-maboya-9b41912bb" target="_blank" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="mailto:willemmaboya08@gmail.com" class="social-link" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                        <img src="assets/william.jpeg" alt="William Maboya" class="profile-image" onerror="this.src='https://via.placeholder.com/400x400/7c3aed/ffffff?text=WM'">
+                        <div class="floating-badge badge-1">
+                            <i class="fas fa-brain"></i>
+                            <span>ML Engineer</span>
+                        </div>
+                        <div class="floating-badge badge-2">
+                            <i class="fas fa-robot"></i>
+                            <span>AI Specialist</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100">
+                <path fill="#ffffff" fill-opacity="1" d="M0,64L48,58.7C96,53,192,43,288,48C384,53,480,75,576,80C672,85,768,75,864,64C960,53,1056,43,1152,42.7C1248,43,1344,53,1392,58.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Get to Know Me</span>
+                <h2 class="section-title">About Me</h2>
+                <div class="title-divider"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Who Am I?</h3>
+                    <p>
+                        I'm a dedicated IT student specializing in emerging technologies and machine learning at 
+                        Richfield Graduate Institute of Technology. I have practical experience building and 
+                        evaluating models using Python, scikit-learn, and TensorFlow, with solid skills in 
+                        data preprocessing, feature engineering, and model evaluation.
+                    </p>
+                    <p>
+                        Seeking internships or junior ML roles to apply academic projects to real-world problems 
+                        and continue developing applied ML and data engineering expertise. I'm passionate about 
+                        leveraging machine learning to solve complex problems and drive innovation.
+                    </p>
+                    <div class="personal-info">
+                        <div class="info-item">
+                            <span class="info-label">Location:</span>
+                            <span class="info-value">Johannesburg, 1632</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Email:</span>
+                            <span class="info-value">willemmaboya08@gmail.com</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Phone:</span>
+                            <span class="info-value">068 222 7254</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Availability:</span>
+                            <span class="info-value">Internship / Junior ML Role</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Languages:</span>
+                            <span class="info-value">English, Sepedi, isiZulu</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">LinkedIn:</span>
+                            <span class="info-value">william-maboya-9b41912bb</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="3">0</div>
+                        <div class="stat-label">ML Projects</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="3">0</div>
+                        <div class="stat-label">Years of Study</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="10">0</div>
+                        <div class="stat-label">Technologies</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="2">0</div>
+                        <div class="stat-label">Degrees Pursuing</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">My Technical Arsenal</span>
+                <h2 class="section-title">Skills & Expertise</h2>
+                <div class="title-divider"></div>
+            </div>
+            
+            <input type="text" class="skill-search" placeholder="🔍 Search skills..." aria-label="Search skills">
+            
+            <div class="skills-content">
+                <!-- Machine Learning & AI -->
+                <div class="skills-category" data-category="ml">
+                    <h3><i class="fas fa-brain"></i> Machine Learning & AI</h3>
+                    <div class="skills-badges">
+                        <span class="skill-badge">Machine Learning</span>
+                        <span class="skill-badge">Data Science</span>
+                        <span class="skill-badge">TensorFlow</span>
+                        <span class="skill-badge">scikit-learn</span>
+                        <span class="skill-badge">Data Preprocessing</span>
+                        <span class="skill-badge">Feature Engineering</span>
+                        <span class="skill-badge">Model Evaluation</span>
+                        <span class="skill-badge">Supervised Learning</span>
+                    </div>
+                </div>
+                
+                <!-- Programming Languages -->
+                <div class="skills-category" data-category="programming">
+                    <h3><i class="fas fa-code"></i> Programming</h3>
+                    <div class="skills-badges">
+                        <span class="skill-badge">Python</span>
+                        <span class="skill-badge">Data Structures</span>
+                        <span class="skill-badge">Algorithms</span>
+                        <span class="skill-badge">Software Engineering</span>
+                    </div>
+                </div>
+                
+                <!-- Web & Integration -->
+                <div class="skills-category" data-category="web">
+                    <h3><i class="fas fa-globe"></i> Web & Integration</h3>
+                    <div class="skills-badges">
+                        <span class="skill-badge">Web Applications</span>
+                        <span class="skill-badge">Model Integration</span>
+                        <span class="skill-badge">Data Pipelines</span>
+                    </div>
+                </div>
+                
+                <!-- Tools & Databases -->
+                <div class="skills-category" data-category="tools">
+                    <h3><i class="fas fa-tools"></i> Tools & Platforms</h3>
+                    <div class="skills-badges">
+                        <span class="skill-badge">Databases</span>
+                        <span class="skill-badge">Database Management</span>
+                        <span class="skill-badge">Git</span>
+                        <span class="skill-badge">Visual Design</span>
+                        <span class="skill-badge">UI/UX</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">My Work</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="title-divider"></div>
+            </div>
+            
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="ml">Machine Learning</button>
+                <button class="filter-btn" data-filter="python">Python</button>
+                <button class="filter-btn" data-filter="web">Web Integration</button>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 1: Classification Model -->
+                <div class="project-card" data-category="ml python">
+                    <div class="project-image">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Supervised Learning Classification</h3>
+                        <p>Built and evaluated supervised learning models using Python, scikit-learn, and TensorFlow for a real-world classification problem.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>scikit-learn</span>
+                            <span>TensorFlow</span>
+                            <span>Data Preprocessing</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="project-detail.html?id=classification-model" class="project-link">
+                                <i class="fas fa-info-circle"></i><span>Details</span>
+                            </a>
+                            <a href="https://github.com/Will-yhum/ML-Classification-Model" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i><span>Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2: Data Preprocessing Pipeline -->
+                <div class="project-card" data-category="ml python">
+                    <div class="project-image">
+                        <i class="fas fa-filter"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Data Preprocessing Pipeline</h3>
+                        <p>Developed end-to-end data preprocessing pipelines with feature engineering and model evaluation for ML workflows.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Pandas</span>
+                            <span>NumPy</span>
+                            <span>Feature Engineering</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="project-detail.html?id=data-pipeline" class="project-link">
+                                <i class="fas fa-info-circle"></i><span>Details</span>
+                            </a>
+                            <a href="https://github.com/Will-yhum/Data-Preprocessing-Pipeline" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i><span>Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3: ML Model Web Integration -->
+                <div class="project-card" data-category="web ml">
+                    <div class="project-image">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>ML Model Web Integration</h3>
+                        <p>Integrated trained machine learning models into web applications to solve real-world problems with interactive interfaces.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Flask</span>
+                            <span>HTML/CSS</span>
+                            <span>ML Integration</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="project-detail.html?id=ml-web-integration" class="project-link">
+                                <i class="fas fa-info-circle"></i><span>Details</span>
+                            </a>
+                            <a href="https://github.com/Will-yhum/ML-Model-Web-Integration" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i><span>Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">My Journey</span>
+                <h2 class="section-title">Education</h2>
+                <div class="title-divider"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Feb 2024 - May 2027</div>
+                    <div class="timeline-content">
+                        <h3>Bachelor of Science in IT</h3>
+                        <h4>Richfield Graduate Institute of Technology</h4>
+                        <p>In progress. Focus areas: Machine Learning, Data Engineering and Software Development. Coursework includes Algorithms, Databases, Artificial Intelligence and Software Engineering. Projects: developed ML models, built data preprocessing pipelines and integrated models into web applications to solve real-world problems.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Feb 2023 - May 2024</div>
+                    <div class="timeline-content">
+                        <h3>Higher Certificate in IT</h3>
+                        <h4>Richfield Graduate Institute of Technology</h4>
+                        <p>Relevant coursework: Machine Learning, Data Science, Python programming, Data Structures, Databases. Capstone project: Built and evaluated supervised learning models using Python, scikit-learn and TensorFlow; performed data preprocessing, feature engineering, and model evaluation to solve a real-world classification problem.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Get In Touch</span>
+                <h2 class="section-title">Contact Me</h2>
+                <div class="title-divider"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Location</h3>
+                        <p>Johannesburg, 1632<br>South Africa</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-phone"></i>
+                        <h3>Phone</h3>
+                        <p>068 222 7254</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>willemmaboya08@gmail.com</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fab fa-linkedin"></i>
+                        <h3>LinkedIn</h3>
+                        <p>william-maboya-9b41912bb</p>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="my-form">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" data-fs-field required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" data-fs-field required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" placeholder="Subject" data-fs-field>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" rows="5" placeholder="Your Message" data-fs-field required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" data-fs-submit-btn>Send Message</button>
+                    <div data-fs-success></div>
+                    <div data-fs-error></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2026 William Maboya. All rights reserved.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/Will-yhum" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/william-maboya-9b41912bb" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:willemmaboya08@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+    <script>
+        window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+        formspree('initForm', { 
+            formElement: '#my-form', 
+            formId: 'mykoywga',
+            onSuccess: function() {
+                const successDiv = document.querySelector('[data-fs-success]');
+                if (successDiv) {
+                    successDiv.innerHTML = '<div class="success-message">✅ Thank you! Your message has been sent successfully. I\'ll get back to you soon!</div>';
+                }
+                document.getElementById('my-form').reset();
+            },
+            onError: function(errors) {
+                const errorDiv = document.querySelector('[data-fs-error]');
+                if (errorDiv) {
+                    errorDiv.innerHTML = '<div class="error-message">❌ Oops! Something went wrong. Please try again or email me directly at willemmaboya08@gmail.com</div>';
+                }
+            }
+        });
+    </script>
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+</body>
+</html>
